@@ -80,7 +80,7 @@ body {
     opacity: 1;
 }
 .article_box:hover .img {
-    transform: scale(1.3);
+    transform: scale(1.2) translate(10px, -10px);
 }
 .article_box:hover .hidden {
     left: 0; right: 0;
