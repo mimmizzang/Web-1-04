@@ -38,13 +38,13 @@ img {
 .header__logo {
   justify-content: center;
   text-align: center;
-  font: italic bold 30pt/50px "Times New Roman";
+  font: italic bold 40px/1.5 "Times New Roman";
   color: white;
 }
 .header__info {
   justify-content: flex-end;
   text-align: center;
-  font: normal 10pt/16pt "Verdana";
+  font: normal 13px/1.5 "Verdana";
   color: darkgray;
   margin-bottom: 20px;
 }
