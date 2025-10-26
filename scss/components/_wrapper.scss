@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "../abstracts/variables" as var;
+
+.wrapper {
+  width: 1280px;
+  height: 720px;
+  background-color: map.get(var.$colors, "dark");
+  display: flex;
+}

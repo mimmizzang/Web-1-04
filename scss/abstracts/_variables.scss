@@ -1,0 +1,31 @@
+$colors: (
+  "white": white,
+  "dark": rgb(50, 50, 50),
+  "gray": gray,
+  "lightgray": lightgray,
+  "darkgray": darkgray,
+  "pink": pink,
+);
+
+$font-sizes: (
+  logo: 40px,
+  info: 13px,
+  p: 15px,
+);
+
+$font-families: (
+  base: "Verdana",
+  logo: "Times New Roman",
+);
+
+$line-height-base: 1.5;
+
+$spacings: (
+  0: 0,
+  1: 5px,
+  2: 10px,
+  3: 20px,
+  4: 40px,
+  5: 50px,
+  6: 70px,
+);

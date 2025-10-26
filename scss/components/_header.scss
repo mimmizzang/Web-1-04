@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixin" as mix;
+
+%header-item-base {
+  height: 100%;
+  padding: 10px;
+  @include mix.flex-col;
+}
+
+.header {
+  width: 280px;
+  height: 100%;
+  border-right: 2px solid map.get(var.$colors, "white");
+  @include mix.flex-col;
+
+  &__logo {
+    @extend %header-item-base;
+
+    @include mix.font-setup(
+      map.get(var.$font-sizes, logo),
+      map.get(var.$font-families, logo),
+      bold,
+      italic
+    );
+    justify-content: center;
+    text-align: center;
+    color: map.get(var.$colors, "white");
+  }
+
+  &__info {
+    @extend %header-item-base;
+
+    @include mix.font-setup(map.get(var.$font-sizes, info));
+    justify-content: flex-end;
+    text-align: center;
+    color: map.get(var.$colors, "darkgray");
+  }
+}

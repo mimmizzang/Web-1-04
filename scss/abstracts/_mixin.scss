@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "variables" as var;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-block-x {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin font-setup(
+  $size,
+  $family: map.get(var.$font-families, base),
+  $weight: normal,
+  $style: normal
+) {
+  font-size: #{$size};
+  line-height: var.$line-height-base;
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}

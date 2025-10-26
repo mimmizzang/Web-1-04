@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixin" as mix;
+
+.index-body {
+  @include mix.flex-center;
+  background: map.get(var.$colors, "lightgray");
+}
+
+.select-body {
+  height: 100vh;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
