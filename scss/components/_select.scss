@@ -13,6 +13,15 @@
     flex-wrap: wrap;
     @include mix.center-block-x;
     @include mix.flex-center;
+
+    @include mix.respond(md) {
+      width: 100%;
+      padding: 30px 15px;
+    }
+
+    @include mix.respond(sm) {
+      padding: 20px 10px;
+    }
   }
 
   &__item {
@@ -24,6 +33,11 @@
     overflow: hidden;
     transform: skewX(-12deg);
     transition: transform 0.1s, background-color 0.6s;
+
+    @include mix.respond(sm) {
+      width: 68px;
+      height: 74px;
+    }
 
     &:hover {
       background-color: $pink;

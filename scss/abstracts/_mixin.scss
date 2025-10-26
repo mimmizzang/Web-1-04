@@ -28,3 +28,9 @@
   font-style: $style;
   font-family: $family;
 }
+
+@mixin respond($breakpoint) {
+  @media (max-width: map.get(var.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}
