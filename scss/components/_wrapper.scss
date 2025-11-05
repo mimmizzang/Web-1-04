@@ -1,9 +1,47 @@
 @use "sass:map";
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixin" as mix;
 
 .wrapper {
   width: 1280px;
-  height: 720px;
+  min-height: 720px;
+
   background-color: map.get(var.$colors, "dark");
-  display: flex;
+
+  display: grid;
+  grid-template-columns: 280px 1000px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "header main";
+
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+
+  @include mix.respond(xl) {
+    width: 90vw;
+    max-width: 1280px;
+
+    grid-template-columns: minmax(230px, 0.3fr) 1fr;
+  }
+
+  @include mix.respond(lg) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "header nav" "content content";
+
+    .main {
+      display: contents;
+    }
+
+    .main__nav {
+      grid-area: nav;
+    }
+
+    .main__content {
+      grid-area: content;
+    }
+  }
 }

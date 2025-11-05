@@ -9,7 +9,6 @@
 }
 
 .header {
-  width: 280px;
   height: 100%;
   border-right: 2px solid map.get(var.$colors, "white");
   @include mix.flex-col;
@@ -35,5 +34,19 @@
     justify-content: flex-end;
     text-align: center;
     color: map.get(var.$colors, "darkgray");
+  }
+
+  @include mix.respond(lg) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border-right: none;
+    border-bottom: 2px solid map.get(var.$colors, "white");
+    padding: 0 20px;
+
+    &__info {
+      display: none;
+    }
   }
 }
